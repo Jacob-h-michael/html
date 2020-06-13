@@ -1,3 +1,3 @@
 <?php
-include_once("onlinebus.html"); 
+include_once("online bus.html"); 
 ?>
