@@ -2,13 +2,13 @@
     "name": "jacobmichael",
     "version": "1.0.0",
     "description": "",
-    "main": "index.html",
+    "main": "app.js",
     "dependencies": {
-        "express": "^4.17.1",
+        "express": "^4.17.1"
     },
     "devDependencies": {},
     "scripts": {
-        "start": "index.html",
+        "start": "node app.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
