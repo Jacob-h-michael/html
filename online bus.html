@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<style>
+    .navbar i h1 {
+        position: relative !important;
+        bottom: 65px !important;
+        left: 40px !important;
+    }
+    
+    .a {
+        background-image: url(images.jpg);
+        background-size: contain;
+        position: relative !important;
+        top: 50px !important;
+        height: 300px;
+    }
+    
+    .b {
+        position: absolute !important;
+        bottom: 100px;
+        left: 150px;
+    }
+    
+    .b form input {
+        padding: 30px;
+        border: 2px solid black !important;
+        border-radius: 8px !important;
+    }
+    
+    .b form label {
+        font-size: large;
+    }
+    
+    .b form button {
+        padding: 15px;
+        padding-right: 30px;
+    }
+    
+    .slideanim {
+        animation-name: slide;
+        animation-duration: 7s;
+    }
+    
+    @keyframes slide {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+    
+    .v {
+        animation-name: slide1;
+        animation-duration: 7s;
+    }
+    
+    @keyframes slide1 {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+    
+    .navbar-nav li a {
+        color: #fff !important;
+    }
+    
+    .navbar a:visited {
+        background-color: blue !important;
+    }
+    
+    .dropdown-menu li a:hover {
+        background-color: red !important;
+    }
+    
+    .navbar a:visited {
+        background-color: blue !important;
+    }
+    
+    .dropdown-menu li a:hover {
+        background-color: red !important;
+    }
+    
+    @media screen and (max-width: 720px) {
+        [class*="col-"] {
+            width: 100%;
+        }
+        .b input {
+            width: 100% !important;
+        }
+        .a {
+            height: 430px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .b {
+            position: absolute !important;
+            top: 30px !important;
+            right: 60px !important;
+        }
+        .v {
+            position: relative !important;
+            top: 50px !important;
+            height: 930px !important;
+        }
+        .slideanim {
+            height: 600px !important;
+        }
+        .w {
+            position: relative !important;
+            top: 200px !important;
+        }
+        .q {
+            position: relative !important;
+            top: 50px !important;
+        }
+        .t {
+            position: relative !important;
+            top: 650px !important;
+        }
+        .t h1 {
+            position: relative !important;
+            top: 70px;
+        }
+        .t span {
+            position: relative !important;
+            top: 70px !important;
+            left: 200px !important;
+        }
+        .y img {
+            position: relative !important;
+            left: 120px !important;
+        }
+        .v img {
+            width: 500px !important;
+        }
+        .slideanim .col-sm-6 p {
+            position: relative !important;
+            left: 200px !important;
+            bottom: 300px !important;
+        }
+        .slideanim .col-sm-12 p {
+            position: relative !important;
+            bottom: 100px !important;
+        }
+    }
+</style>
+
+<body id="bus">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid" style="background-color:black;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mytarget">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand material-icons" href="#bus"><i  style="font-size:36px ;color:red;">airport_shuttle<h1>JACKBUS</h1></i></a>
+            </div>
+            <ul id="mytarget" class="nav navbar-nav navbar-right">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu " style="background-color: black;position: relative;">
+                        <li data-toggle="modal" data-target="#myModal" style="color: white;text-align: center;">sign in</li>
+                        <li style="text-align: center;"><a href="signin.html">sign up</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="a">
+        <div class="b">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="FROM">FROM <i class='fas fa-building' style="font-size:24px;"></i>:</label>
+                    <input type="text" class="form-control" id="FROM" placeholder="ENTER THE PICKUP">
+                </div>
+                <div class="form-group">
+                    <label for="destination">DESTINATION<i class='fas fa-building' style="font-size:24px;"></i>:</label>
+                    <input type="text" class="form-control" id="destination" placeholder="ENTER THE DESTINATION">
+                </div>
+                <div class="form-group">
+                    <label for="date">DATE:</label>
+                    <input type="date" class="form-control" id="date">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style=" font-size:20px;">Submit</button>
+            </form>
+        </div>
+
+    </div>
+    <div class="slideanim" style=" height: 300px;position: relative;top: 30px;column-rule: 3px solid black;background-color: azure;">
+        <h1 style="text-align: center;text-decoration: underline;">OFFERS</h1>
+        <div class="col-sm-4" style="border-style: solid;">
+            <div class="col-sm-6">
+                <img src="OYO_Rooms_(logo).png" alt="oyo" style="width: 100px;height: 100px;">
+                <img src="images (1).jpg" alt="oyo" style="width: 100px;height: 100px;position: relative;top: 90px;right: 100px;">
+
+
+
+            </div>
+            <div class="col-sm-6">
+                <p style="position: relative;top:50px;right: 130px;font-size: larger;">
+                    FLAT 70% offer
+                </p>
+            </div>
+            <div class="col-sm-12" style="text-align: center;font-size: x-large;position: relative;right: 40px;">
+                <p style="text-shadow: 2px 2px 5px red;position: relative;left: 10px;"> Use code:33445</p>
+            </div>
+        </div>
+        <div class="col-sm-4" style="border-style: solid;">
+            <div class="col-sm-6">
+                <img src="1554869659.jpg" alt="oyo" style="width: 100px;height: 100px;">
+                <img src="81nyUg2oDUL._SX425_.jpg" alt="oyo" style="width: 100px;height: 100px;position: relative;top: 90px;right: 100px;">
+
+
+
+            </div>
+            <div class="col-sm-6">
+                <p style="position: relative;top:50px;right: 130px;font-size: larger;">
+                    FLAT 20% offer
+                </p>
+            </div>
+            <div class="col-sm-12" style="text-align: center;font-size: x-large;position: relative;right: 40px;">
+                <p style="text-shadow: 2px 2px 5px red;position: relative;left: 10px;"> Use code:35795</p>
+            </div>
+        </div>
+        <div class="col-sm-4" style="border-style: solid;">
+            <div class="col-sm-6">
+                <img src="download.png" alt="oyo" style="width: 100px;height: 100px;">
+                <img src="81nyUg2oDUL._SX425_.jpg" alt="oyo" style="width: 100px;height: 100px;position: relative;top: 90px;right: 100px;">
+
+
+
+            </div>
+            <div class="col-sm-6">
+                <p style="position: relative;top:50px;right: 130px;font-size: larger;">
+                    FLAT 20% offer
+                </p>
+            </div>
+            <div class="col-sm-12" style="text-align: center;font-size: x-large;position: relative;right: 40px;">
+                <p style="text-shadow: 2px 2px 5px red;position: relative;left: 10px;"> Use code:34675</p>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <div class="v" style="height: 500px; background-color: grey;position: relative;top: 20px;">
+            <div style="height:280px;">
+                <div class="col-sm-6">
+                    <img src="1194985162469795488bus1.png" alt="bus" style="height: 300px;">
+                </div>
+                <div class="col-sm-6">
+                    <h1>TRACK MY BUS - Smarter Way To Travel</h1>
+                    <p>Track your bus with our ‘Track My Bus’ feature and know the exact location in real-time.Stay informed and keep your family informed!</p>
+
+                </div>
+
+
+
+            </div>
+            <hr>
+            <div class="w" style="height: 100px;">
+                <div class="col-sm-4">
+                    <h3>BUSES</h3>
+                    <h1>10,000</h1>
+                    <p>Total buses currently being tracked</p>
+
+                </div>
+                <div class="col-sm-4">
+                    <h3>ROUTES</h3>
+                    <h1>60,000</h1>
+                    <p>Total routes covered by live tracking</p>
+
+
+                </div>
+                <div class="col-sm-4">
+                    <h3>USERS</h3>
+                    <h1>40,000</h1>
+                    <p>Total users using Track My Bus feature</p>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="q" style="height: 300px;">
+        <div style="height: 130px;">
+            <h1 style="text-decoration: underline;text-align: center;">AWARDS & RECOGNITION</h1>
+
+
+        </div>
+        <div style="height: 90px;">
+            <div class="col-sm-6">
+                <img src="Business-Awards-Logo-1.png" alt="awards" style="height: 300px;width: 500px;"><br>
+                <br>
+                <h2 style="text-align: center;">Most Trusted Company</h2>
+
+
+            </div>
+            <div class="col-sm-6 y">
+                <img src="lba19_boutique_win.png" alt="awards" style="height: 300px;width: 300px;position: relative;left: 200px;">
+                <br><br>
+                <h2 style="text-align: center;">Most Innovation Company</h2>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    <footer class="t" style="background-color: lightgrey; height: 200px;position: relative;top: 200px;">
+        <h1 style="position: relative;bottom: 100px;">For more information contact customer care:04564456666 </h1>
+        <a href="#bus" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up" style="position: absolute;left: 500px;top: 150px;"></span>
+        </a>
+    </footer>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sign up</h4>
+                </div>
+                <div class="modal-body">
+                    <h2>Sign up</h2>
+                    <form>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">Password:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="remember"> Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
