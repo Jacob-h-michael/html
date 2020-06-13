@@ -1,0 +1,16 @@
+{
+    "name": "jacobmichael",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "dependencies": {
+        "express": "^4.17.1",
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "index.html",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+}
