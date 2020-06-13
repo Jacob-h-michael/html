@@ -1,1 +1,3 @@
-echo '<?php include_once("onlinebus.html"); ?>';
+<?php
+include_once("onlinebus.html"); 
+?>
