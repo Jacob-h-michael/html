@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        header li {
+            color: white;
+        }
+        
+        .navbar-nav li a {
+            position: relative;
+            top: 50px !important;
+            right: 400px !important;
+            font-size: xx-large;
+            font-weight: bold !important;
+            color: black !important;
+        }
+        
+        .a a:hover {
+            background-color: black !important;
+            text-decoration: underline !important;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 15px;
+            right: 0;
+            height: 100%;
+            width: 92%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: black;
+        }
+        
+        .container:hover .overlay {
+            opacity: 1;
+        }
+        
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        @media screen and (max-width: 720px) {
+            body {
+                height: 9647px !important;
+            }
+            header {
+                height: 200px !important;
+            }
+            .phone {
+                position: relative !important;
+                left: 60px !important;
+                top: 60px !important;
+            }
+            .comment {
+                position: relative !important;
+                left: -80px !important;
+                top: 90px !important;
+            }
+            .arrow {
+                position: relative !important;
+                left: 60px !important;
+                top: 100px !important;
+            }
+            .navbar-default {
+                position: relative !important;
+                top: 40px !important;
+                height: 150px !important;
+            }
+            .container-fluid {
+                height: 190px !important;
+            }
+            .navbar-default ul {
+                position: relative !important;
+                bottom: 10px !important;
+                display: inline-block !important;
+                left: 378px !important;
+            }
+            .navbar-default ul li a {
+                font-size: small !important;
+                display: inline-block !important;
+                position: relative !important;
+                left: 13px !important;
+                top: 4px !important;
+            }
+            .a {
+                position: relative !important;
+                top: 140px !important;
+            }
+            .user {
+                left: 200px !important;
+            }
+            .bui {
+                left: 50px !important;
+            }
+            .bui h1 {
+                font-size: medium !important;
+            }
+            .bui p {
+                font-size: small !important;
+            }
+            .con {
+                left: 60px !important;
+            }
+            .lea {
+                left: 250px !important;
+            }
+            .b {
+                position: relative;
+                top: 160px !important;
+                height: 270px !important;
+            }
+            .b1 {
+                position: relative !important;
+                left: 17px !important;
+                width: 80% !important;
+            }
+            .b .bsub {
+                position: relative !important;
+                left: 200px !important;
+                top: 40px !important;
+            }
+            .c {
+                position: relative !important;
+                top: 160px !important;
+                height: 1400px !important;
+            }
+            .c1 {
+                width: 100% !important;
+                height: 320px !important;
+            }
+            .csub {
+                position: relative !important;
+                left: 200px !important;
+            }
+            .d {
+                position: relative !important;
+                top: 160px !important;
+                height: 1100px !important;
+            }
+            .d img {
+                height: 90% !important;
+            }
+            .d1 {
+                height: 250px !important;
+                width: 70% !important;
+                margin-left: 0px !important;
+            }
+            .d2 {
+                width: 100% !important;
+            }
+            .d12 {
+                height: 350px !important;
+                width: 100% !important;
+                position: relative !important;
+                bottom: 50px !important;
+            }
+            .d12a {
+                position: relative !important;
+                top: -70px !important;
+            }
+            .d21 {
+                width: 100% !important;
+                height: 40% !important;
+            }
+            .dsub {
+                top: 140px !important;
+                left: 190px !important;
+            }
+            .e {
+                position: relative !important;
+                top: 300px !important;
+                height: 900px !important;
+            }
+            .e1 {
+                height: 750px !important;
+                width: 55% !important;
+                position: relative !important;
+                left: 130px !important;
+            }
+            .e12 {
+                width: 100% !important;
+            }
+            .e12a {
+                position: relative !important;
+                left: -75px !important;
+            }
+            .f {
+                position: relative !important;
+                top: 300px !important;
+            }
+            .g {
+                position: relative !important;
+                top: 200px !important;
+                height: 1000px !important;
+            }
+            .g1 {
+                width: 59% !important;
+                height: 373px !important;
+                margin-left: 92px !important;
+            }
+            .g2 {
+                width: 74% !important;
+                position: relative !important;
+                left: 90px !important;
+                margin-left: 0px !important;
+                margin-top: 8px !important;
+                height: 326px !important;
+            }
+            .h {
+                width: 100% !important;
+                height: 300px !important;
+            }
+            .h h1 {
+                font-size: x-large !important;
+                position: relative !important;
+                left: -160px !important;
+            }
+            .hsub {
+                position: relative !important;
+                left: -160px !important;
+            }
+            .i {
+                height: 600px !important;
+            }
+            .i1 {
+                width: 78% !important;
+            }
+            .j {
+                position: relative !important;
+                top: 600px !important;
+                height: 1095px !important;
+            }
+            .j1 {
+                width: 80% !important;
+                margin-top: 68px !important;
+            }
+            .j1 img {
+                height: 190px !important;
+            }
+            .j11 {
+                margin-top: 0px !important;
+                position: relative !important;
+                bottom: 8px !important;
+            }
+            .j11 img {
+                height: 300px !important;
+            }
+            .z {
+                position: relative !important;
+                top: 559px !important;
+                height: 1000px !important;
+            }
+            .z1 {
+                width: 80% !important;
+            }
+            .z11 {
+                position: relative !important;
+                bottom: -34px !important;
+            }
+            .z12 {
+                position: relative !important;
+                top: 40px !important;
+            }
+            .fa-quote-right {
+                left: 152px !important;
+                bottom: 47px !important;
+            }
+            .fa-paper-plane {
+                left: 7px !important;
+            }
+            .h1 {
+                position: absolute !important;
+                left: 322px !important;
+            }
+            .y {
+                position: relative !important;
+                top: 533px !important;
+            }
+            .y span {
+                position: relative !important;
+                left: 224px !important;
+            }
+            .navbar-collapse {
+                overflow: hidden !important;
+            }
+            .navbar-brand {
+                position: relative !important;
+                bottom: -50px !important;
+            }
+        }
+    </style>
+</head>
+
+<body id="bus">
+    <header style="background-color: black;height: 50px;">
+        <ul style="display: inline-block;list-style: none;">
+            <li style="display: inline-block;position: relative;top: 20px;">
+                We Are Specialists In Construction And Architecture!
+
+
+            </li>
+            <li class="phone" style="display: inline-block;position: relative;left: 400px;top: 20px;">
+                <i class='fas fa-phone' style="color: yellow;"></i>(+234) 802 207 835
+            </li>
+            <li class="comment" style="display: inline-block;position: relative;left: 420px;top: 20px;">
+                <i class='far fa-comment' style="color: yellow;"></i>info@constech.com
+            </li>
+            <li class="arrow" style="display: inline-block; position: relative;left: 440px;top: 20px;"><i class='fas fa-location-arrow ' style="color: yellow; "></i>48 New Marker Road, Onisha Anambra State, Nigeria</li>
+
+        </ul>
+    </header>
+    <nav class="navbar navbar-default  " style="width: 100%;">
+        <div class="container-fluid" style="background-color:white;height: 150px;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mytarget">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                <a class="navbar-brand material-icons" href="#bus"><img src="Logo-1.png" alt="l" style="height: 150px;width: 150px;position: relative;bottom: 30px;left: 20px;"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="mytarget">
+                <ul class="nav navbar-nav" style="position: relative;left: 781px;">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="a" style="height: 350px; background-image: url(38391858_ml-800x418-1.jpg);background-size: 100% 350px;position: relative;bottom: 10px;">
+        <div>
+            <i class='user fas fa-house-user' style='font-size:48px;color:red;position: absolute;left:700px;top: 10px;'></i>
+
+        </div>
+        <div class="bui" style="position: absolute; left:500px ;top:110px ;">
+            <h1 style="font-size:xx-large ;color: black;font-weight: bold;">BUILDING A REGISTER HOME</h1>
+        </div>
+        <div class="bui" style="position: absolute; left:500px ;top:170px ;">
+            <h1 style="font-size:large ;color: mintcream;font-weight: bold;">BUILDING A REGISTER HOMdgfddfhhfggfjgjhhjhghE<br>gffhggfgffgf</h1>
+        </div>
+        <div class="con" style="position: absolute; left:550px ;top:260px  ;">
+            <a role="button" class="btn btn-primary btn-lg" style="width: 150px;">Contact</a>
+        </div>
+        <div class="lea" style="position: absolute; left:720px ;top:260px ;">
+            <a role="button" class="btn btn-primary btn-lg" style="width: 150px;">Learn More</a>
+        </div>
+    </div>
+    <div class="b" style="background-color: lightgrey; height: 140px;">
+        <div style="display: inline-block;">
+            <i class='far fa-lightbulb' style='font-size:48px;color:yellow'></i>
+        </div>
+        <div class="b1" style="display: inline-block; position: relative;top: 20px; left: 50px;">
+            <h2 style="font-weight: bold; color:black ;">
+                YOU WANT TO BUILD THE PROJECT?
+            </h2>
+            <p style="font-weight: bold; color:black ;">In rutrum a ex vitae efficitur quam placerat ultrices dapibus non est.
+            </p>
+        </div>
+        <div class="bsub" style="display: inline-block; position: relative;left: 700px;">
+            <button type="button" class="btn btn-warning btn-lg">Get Quotes</button>
+
+        </div>
+    </div>
+    <div class="c" style="height: 430px;margin-top: 30px;">
+        <div class="c1" style="height: 300px; display: inline-block;width: 24%;">
+
+            <div class="container" style="display: inline-block;position: relative;height: 250px;width: 100%;">
+                <img src="02_ZQ.jpg" alt="Avatar" class="image " style="width: 100%;height: 250px;">
+                <div class="overlay">
+                    <div class="text">Hello </div>
+                </div>
+
+            </div>
+            <h2 style="position: relative;left:70px;display: inline-block;">Architecture</h2>
+        </div>
+        <div class="c1" style="height: 300px;display: inline-block;width: 24%;">
+
+            <div class="container" style="display: inline-block;position: relative;height: 250px;width: 100%;">
+                <img src="ntolhn3l16uo4yyk.jpeg" alt="Avatar" class="image " style="width: 100%;height: 250px;">
+                <div class="overlay">
+                    <div class="text">Hello </div>
+                </div>
+
+            </div>
+            <h2 style="position: relative;left: 70px;display: inline-block;">CONSTRUCTION</h2>
+        </div>
+        <div class="c1" style="height: 300px;display: inline-block;width: 24%;">
+
+            <div class="container" style="display: inline-block;position: relative;height: 250px;width: 100%;">
+                <img src="shisha-960x720.jpg" alt="Avatar" class="image " style="width: 100%;height: 250px;">
+                <div class="overlay">
+                    <div class="text">Hello </div>
+                </div>
+
+            </div>
+            <h2 style="position: relative;left: 70px;display: inline-block;">WATER PIPE</h2>
+        </div>
+        <div class="c1" style="height: 300px;display: inline-block;width: 24%;">
+
+            <div class="container" style="display: inline-block;position: relative;height: 250px;width: 100%;">
+                <img src="59851681-abstract-watercolor-painting-red-hibiscus-flower-on-blue-color-background-hand-painted-red-floral-wa.jpg" alt="Avatar" class="image " style="width: 100%;height: 250px;">
+                <div class="overlay">
+                    <div class="text">Hello </div>
+                </div>
+
+            </div>
+            <h2 style="position: relative;left: 70px;display: inline-block;">WALL PAINT</h2>
+
+        </div>
+        <div class="csub" style="position: relative; top: 70px;left: 650px;display: inline-block;">
+            <button type="button" class="btn btn-warning btn-lg">ALL SERVICE</button>
+        </div>
+
+    </div>
+    <div class="d" style="height: 500px;background-color: oldlace;">
+        <div style="position: relative;top: 20px;">
+            <h2 style="text-align: center;color: black;text-decoration: underline;">Our Success</h2>
+
+        </div>
+        <div class="d1" style="height: 300px;width: 80%;position: relative;top: 100px;left: 100px;display: inline-block;">
+            <div class="d2" style="height: 270px;display: inline-block;width: 30%;position: relative;bottom: 40px;">
+
+                <div class="container" style="display: inline-block;position: relative;height: 250px;width: 100%;">
+                    <img src="47-473816_hall-wall-painting-design.jpg" alt="Avatar" class="image " style="width: 100%;height: 250px;">
+                    <div class="overlay">
+                        <div class="text">Hello </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="d12" style="height: 270px;display: inline-block;width: 30%;position:relative;">
+                <div class="container d21" style="height: 100px;width: 100%;position: relative;">
+                    <img src="71qfkqKfFoL._SL1500_.jpg" alt="Avatar" class="image " style="width: 100%;height: 100px;">
+                    <div class="overlay">
+                        <div class="text">Hello </div>
+                    </div>
+
+
+                </div>
+                <div class="container d21" style="height: 130px;width: 100%;position: relative;top: 20px;">
+                    <img src="beibehang-a-tree-flower-Murals-Wallpaper-3D-TV-Background-Large-Wall-Painting-wallpapers-for-Living-Room.jpg" alt="Avatar" class="image " style="width: 100%;height: 130px;">
+                    <div class="overlay">
+                        <div class="text">Hello </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="d12 d12a" style="height: 270px;display: inline-block;width: 30%;position:relative; top: 20px;">
+                <div class="container d21" style="height: 130px;width: 100%;position: relative;">
+                    <img src="maxresdefault.jpg" alt="Avatar" class="image " style="width: 100%;height: 130px;">
+                    <div class="overlay">
+                        <div class="text">Hello </div>
+                    </div>
+
+
+                </div>
+                <div class="container d21" style="height: 100px;width: 100%;position: relative;top: 14px;">
+                    <img src="59c5d8067e5468c7e0d38d2a6ff652f5.jpg" alt="Avatar" class="image " style="width: 100%;height: 100px;">
+                    <div class="overlay">
+                        <div class="text">Hello </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dsub" style="position: relative; top: 230px;right: 600px;display: inline-block;">
+            <button type="button" class="btn btn-warning btn-lg">ALL SERVICE</button>
+        </div>
+
+
+
+    </div>
+    <div class="e" style="height: 300px;">
+        <div style="position: relative;top: 20px;">
+            <h2 style="text-align: center;color: black;text-decoration: underline;">Our Process</h2>
+
+        </div>
+        <div class="e1" style="width: 75%;height: 200px;display: inline-block;position: relative;left: 180px;top:100px">
+            <div class="e12" style="width: 20%;display: inline-block;">
+                <a href="#"><i class='fab fa-accusoft' style='font-size:48px;color: red;'></i></a>
+                <h1 style="display: inline-block;font-weight: bold;color: orange; ">&nbsp; 01</h1><br>
+                <h2 style="font-weight: bold; color: black;"> Planning</h2><br>
+                <p style="display: inline-block;">sggsgsddsgsdgsdgsg <br></p>
+
+
+            </div>
+            <div class="e12 e12a" style="width: 20%;display: inline-block;margin-left: 70px;">
+                <a href="#"><i class='fab fa-adobe' style='font-size:48px;color:red'></i></a>
+                <h1 style="display: inline-block;font-weight: bold;color: orange; ">&nbsp; 02</h1><br>
+                <h2 style="font-weight: bold; color: black;"> Architecture</h2><br>
+                <p style="display: inline-block;">sggsgsddsgsdgsdgsg <br></p>
+
+
+            </div>
+            <div class="e12 e12a" style="width: 20%;display: inline-block;margin-left: 70px;">
+                <a href="#"><i class='fab fa-artstation' style='font-size:48px;color:red'></i></a>
+                <h1 style="display: inline-block;font-weight: bold;color:orange ; ">&nbsp; 03</h1><br>
+                <h2 style="font-weight: bold; color: black;"> Construction</h2><br>
+                <p style="display: inline-block;">sggsgsddsgsdgsdgsg <br></p>
+
+
+            </div>
+            <div class="e12 e12a" style="width: 20%;display: inline-block;margin-left: 70px;">
+                <a href="#"><i class='fab fa-asymmetrik' style='font-size:48px;color:red'></i></a>
+                <h1 style="display: inline-block;font-weight: bold;color: orange; ">&nbsp; 04</h1><br>
+                <h2 style="font-weight: bold; color: black;"> Testing</h2><br>
+                <p style="display: inline-block;">sggsgsddsgsdgsdgsg <br></p>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="f" style="height: 400px;position: relative; background-image: url(912298_wallpapers-handsum-man-fashion-handsome-men-hd-get-1920x1080_1920x1080_h.jpg);background-size: 100% 400px;">
+        <div style="position: absolute; width: 40%;height: 200px;background-color: white;top: 100px;left: 20px;border: 1px solid black;">
+            <i class='fas fa-quote-left' style='font-size:36px;color: orange;'></i><br>
+            <p style="text-align: center;word-wrap: break-word;">fxytffhtxhftfhtfhxxfhghfghffgxfhhfddhhfxgfxhxfjggjffjjfgfjfjxgfjgfjjgfjxhjghcjhhjfcggcjjfjfxxfgtxhtxfhxtfhhxghdfdhfhdhdfdhfhdhd</p><br>
+            <i class='far fa-paper-plane' style='font-size:48px;color:orange;position: relative;left: 100px;'></i><br>
+            <i class='fas fa-quote-right' style='font-size:36px;color: orange;position: relative;left: 500px;'></i>
+        </div>
+
+
+    </div>
+    <div class="g" style="height: 400px;margin-top: 80px;">
+        <div style="position: relative;top: 30px;">
+            <h1 style="text-decoration: underline;text-align: center;">WHY WE CHOOSE</h1>
+
+        </div>
+        <div class="g1" style="height: 300px;margin-top: 70px;width:40%;margin-left: 170px;display: inline-block;">
+            <h3 style="font-weight: bold;">PROFESSIONAL COMPANY &nbsp;<i class='fas fa-address-card' style='font-size:36px;color: orange;'></i></h3><br>
+            <p> gxxgrgsdghhgddghdghgdhdgdhgdhddgdghdh</p>
+            <h3 style="font-weight: bold;">Architecture QUALITY &nbsp;<i class='fas fa-dumbbell' style='font-size:36px;color: orange;'></i></h3><br>
+            <p> gxxgrgsdghhgddghdghgdhdgdhgdhddgdghdh</p>
+            <h3 style="font-weight: bold;">HEALTHY WORKER &nbsp;<i class='fas fa-user-md' style='font-size:36px;color: orange;'></i></h3><br>
+            <p> gxxgrgsdghhgddghdghgdhdgdhgdhddgdghdh</p>
+        </div>
+        <div class="g2" style="height: 300px;margin-top: 70px;width:40%;margin-left: 120px;display: inline-block;">
+            <h3 style="font-weight: bold;">PERFECT SIZE &nbsp;<i class='fas fa-gifts' style='font-size:36px;color: orange;'></i></h3><br>
+            <p> gxxgrgsdghhgddghdghgdhdgdhgdhddgdghdh</p>
+            <h3 style="font-weight: bold;">AFTER SUPPORT &nbsp;<i class='fas fa-image' style='font-size:36px;color: orange;'></i></h3><br>
+            <p> gxxgrgsdghhgddghdghgdhdgdhgdhddgdghdh</p>
+            <h3 style="font-weight: bold;">CONSTRUCTION MEDAL &nbsp;<i class='fas fa-cloud-download-alt' style='font-size:36px;color: orange;'></i></h3><br>
+            <p> gxxgrgsdghhgddghdghgdhdgdhgdhddgdghdh</p>
+
+
+        </div>
+
+
+    </div>
+    <div class="h" style="height: 200px;margin-top: 50px;position: relative;background-image: url(Satellitef3b4.jpg);">
+        <div class="h1" style="position: absolute;left: 350px;top:50px;">
+            <h1 style="color: black;font-weight: bold;">WE ARE HAVING A PROJECT FOR YOU!</h1><br>
+            <button type="button" class="btn btn-warning btn-lg hsub " style="position: relative;left: 200px;">GET A Quotes</button>
+
+
+        </div>
+
+
+
+    </div>
+    <div class="i" style="height: 420px;">
+        <div style="position: relative;top: 20px;">
+            <h2 style="text-align: center;color: black;text-decoration: underline;">Our Process</h2>
+
+        </div>
+        <div class="i1" style="width: 25%;display: inline-block;height: 300px;margin-left: 80px;">
+            <img src="shisha-960x720.jpg" alt="dff" style="width: 100%;height: 180px;margin-top: 50px;">
+            <h3 style="font-weight: bold;">Sed lacinia Tincidunt Enim In Luctus</h3>
+            <p>Quisque vehicula aliquam mauris, non suscipit feli fermentum id. Quisque tempor velit neque. Fusce nec risus vitae urna interdum dapibus.</p>
+
+
+        </div>
+        <div class="i1" style="width: 25%;display: inline-block;height: 300px;margin-left: 80px;">
+            <img src="59c5d8067e5468c7e0d38d2a6ff652f5.jpg" alt="dff" style="width: 100%;height: 180px;margin-top: 50px;">
+            <h3 style="font-weight: bold;">Nunc Sollicitudin Eros At Turpis Tempor</h3>
+            <p>Quisque vehicula aliquam mauris, non suscipit feli fermentum id. Quisque tempor velit neque. Fusce nec risus vitae urna interdum dapibus.</p>
+
+
+        </div>
+        <div class="i1" style="width: 25%;display: inline-block;height: 300px;margin-left: 80px;">
+            <img src="71qfkqKfFoL._SL1500_.jpg" alt="dff" style="width: 100%;height: 180px;margin-top: 50px;">
+            <h3 style="font-weight: bold;">Ellentesque Erat Lacus Tincidunt.</h3>
+            <p>Quisque vehicula aliquam mauris, non suscipit feli fermentum id. Quisque tempor velit neque. Fusce nec risus vitae urna interdum dapibus.</p>
+
+
+        </div>
+
+    </div>
+    <div class="j" style="background-color: lightgrey;margin-top: 30px;height: 150px;">
+        <div class="j1" style="display: inline-block;width: 20%;margin-left: 50px;">
+            <a href="#">
+                <img src="Logo-1.png" alt="s" style="width: 100%;height: 50%;">
+            </a>
+
+
+        </div>
+        <div class="j1" style="display: inline-block;width: 20%;margin-left: 50px;margin-top: 5px;">
+            <a href="#">
+                <img src="logo_5.png" alt="s" style="width: 100%;height: 130px;">
+            </a>
+
+
+        </div>
+        <div class="j1" style="display: inline-block;width: 20%;margin-left: 50px;margin-top: 5px;">
+            <a href="#">
+                <img src="24354.png" alt="s" style="width: 100%;height: 130px;">
+            </a>
+
+
+        </div>
+        <div class="j1 j11" style="display: inline-block;width: 20%;margin-left: 50px;margin-top: 5px;">
+            <a href="#">
+                <img src="24361.png" alt="s" style="width: 100%;height: 130px;">
+            </a>
+
+
+        </div>
+
+
+
+
+
+    </div>
+    <div class="z" style="height: 300px; margin-top: 50px;">
+        <div class="z1" style="display: inline-block;width: 20%;margin-left: 50px;">
+            <img src="Logo-1.png" alt="c" style="width: 100%;height: 50%;">
+            <p style="word-wrap: break-word;">sfjnsnjsdhgjldnjdgnjksnsjknsjkndsjkdsnjkdnjkdnsdjkrdthhgghfghxfghxgffgx</p><br>
+            <a href="#"><i class="fa fa-facebook-official" style="color: lightblue"></i></a>
+            <a href="#" style="position: relative;left: 20px;"><i class="fa fa-amazon" style="color: black;"></i></a>
+            <a href="#" style="position: relative;left: 40px;"><i class="fa fa-google-plus" ></i></a>
+            <a href="#" style="position: relative;left: 60px;"><i class="fa fa-linkedin-square" ></i></a>
+
+        </div>
+        <div class="z1 z11" style="margin-left: 50px;width: 20%;display: inline-block;height: 225px;position: relative;bottom: 38px;">
+            <div style="display: inline-block;width: 100%;position: relative;bottom: 10px;">
+                <h3 style="font-weight: bold;text-align: center;text-decoration: underline;"> USEEFUL LINKS</h3>
+
+            </div>
+            <div style="display: inline-block;width: 40%;">
+                <ul style="list-style: none;">
+                    <li style="font-size: medium; color: black">home</li>
+                    <li style="font-size: medium;color: black;margin-top: 8px;">service</li>
+                    <li style="font-size: medium;color: black;margin-top: 8px;">project</li>
+                    <li style="font-size: medium;color: black;margin-top: 8px;">about us</li>
+
+                </ul>
+
+            </div>
+            <div style="display: inline-block;width: 40%;margin-left: 20px;bottom: 20px;position: relative;">
+                <ul style="list-style: none;margin-bottom: 20px;">
+                    <li style="font-size: medium; color: black">Contact Us</li>
+                    <li style="font-size: medium;color: black;margin-top: 8px;">Blog</li>
+                    <li style="font-size: medium;color: black;margin-top: 8px;">FAQ</li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="z1" style="margin-left: 50px;width: 20%;display: inline-block;">
+            <div style="display: inline-block;width: 100%;position: relative;top: 15px;">
+                <h3 style="font-weight: bold;text-align: center;text-decoration: underline;"> CONTACT US</h3>
+
+            </div>
+            <div style="width: 100%;display: inline-block;margin-top: 20px;">
+                <h4 style="margin-left: 10px;"><i class='fas fa-phone-alt' style='font-size:24px;color: orange;'></i>&nbsp;&nbsp; (+234) 81 639 2749</h4>
+                <h4 style="margin-left: 10px;margin-top: 10px;"><i class='fas fa-mobile-alt' style='font-size:24px;color: orange;'></i>&nbsp;&nbsp; (+234) 81 639 2749</h4>
+                <h4 style="margin-left: 10px;margin-top: 10px;"><i class='fas fa-comment-dots' style='font-size:24px;color: orange;'></i>&nbsp;&nbsp; info@constech.com</h4>
+                <h4 style="margin-left: 10px;margin-top: 10px;">
+                    <i class='fas fa-map-marker-alt' style='font-size:24px;color: orange;'></i>&nbsp;&nbsp;48 New Marker Road, Onisha Anambra State, Nigeria</h4>
+
+            </div>
+        </div>
+        <div class="z1 z12" style="margin-left: 50px;width: 20%;display: inline-block;">
+            <div style="display: inline-block;width: 100%;position: relative;bottom: 10px;">
+                <h3 style="font-weight: bold;text-align: center;text-decoration: underline;"> WORKING &nbsp; HOURS</h3>
+            </div>
+            <div style="display: inline-block;margin-top: 20px;">
+                <h4>Our support available to help you 24 hours a day, seven days a week.</h4>
+                <h4>Monday-Friday:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> to 5pm</strong></h4>
+                <h4>Saturday:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong> to 2pm</strong></h4>
+                <h4>Sunday:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>Closed</strong></h4>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="y">
+        <a href="#bus" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up " style="position: relative;left: 700px;"></span>
+        </a>
+    </div>
+
+
+</body>
+
+</html>
