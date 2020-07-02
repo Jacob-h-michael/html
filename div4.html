@@ -1,24 +1,41 @@
-<!DOCTYPE html->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <style>
-        .test {
-            display: inline-block;
-        }
-    </style>
-</head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body>
-    <div class="test" style="background-color:brown;width:25%;height:60%; float:left;"></div>
-    <div class="test" style="background-color:green;width:35%;height:60%; float: left;"></div>
-    <div class="test" style="background-color:yellowgreen;width:20%;height:100%; float:left;"></div>
-    <div class="test" style="background-color:violet;width:20%;height:80%; float:left;"></div>
+    <body>
+        <form action="div5.html">
+            <h3>neflfnesjlnesjllnfjlnsdjldsgnldgjsndsgjldsgnljdsgnljdsgnsgjlnsg</h3>
+            <input type="radio" value="3" id="a" name="3">
+            <label for="a">3</label><br>
+            <input type="radio" value="4" id="b" name="3">
+            <label for="b">4</label><br>
+            <input type="radio" value="5" id="c" name="3">
+            <label for="c">5</label><br>
+            <input type="radio" value="6" id="d" name="3">
+            <label for="d">6</label><br>
+            <button id="bt" onclick="btnclick()"> next</button>
 
-    <div class="test" style="background-color:wheat;width:20%;height:20%; float:left;"></div>
-    <div class="test" style="background-color:blue;width:10.5%;height:20%;position: relative;right: 1200px;top: -292px;"></div>
-    <div class="test" style="background-color:bisque;width:49%;height:40%;position: relative;left: 160px;top: -440px;"></div>
-    <div class="test" style="background-color:yellow;width:10.5%;height:20%;position: relative;right: 740px;top: -435px; "></div>
-</body>
+        </form>
+        <script>
+            var hy = localStorage.getItem("score");
+
+            function btnclick() {
+                if (b.checked == true) {
+                    hy++
+                    localStorage.setItem("score", hy);
+
+
+
+                }
+
+            }
+        </script>
+
+
+    </body>
 
 </html>

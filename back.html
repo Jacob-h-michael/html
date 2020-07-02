@@ -3,9 +3,63 @@
 
 <body>
     <h1>
-        succee
+        Let see ur score guys
     </h1>
-    <a href="form1.html">Back</a>
+    <p id="demo"></p>
+    <p id=dem></p>
+    <button id="btn2" onclick="scores()">Click here to get the result</button>
+    <form style="margin-top: 50px;" action="table.html">
+        <button id="btn3" disabled>homepage</button>
+    </form>
+    <script>
+        function scores() {
+            var marks = localStorage.getItem("score");
+            if (marks == 1) {
+                result = "Your score is 1";
+                result1 = "very poor";
+                document.getElementById("demo").innerHTML = result;
+                document.getElementById("dem").innerHTML = result1;
+                dup();
+            } else if (marks == 2) {
+                result = "Your score is 2";
+                result1 = "poor";
+                document.getElementById("demo").innerHTML = result;
+                document.getElementById("dem").innerHTML = result1;
+                dup();
+            } else if (marks == 3) {
+                result = "Your score is 3";
+                result1 = "average";
+                document.getElementById("demo").innerHTML = result;
+                document.getElementById("dem").innerHTML = result1;
+                dup();
+            } else if (marks == 4) {
+                result = "Your score is 4";
+                result1 = "gud";
+                document.getElementById("demo").innerHTML = result;
+                document.getElementById("dem").innerHTML = result1;
+                dup();
+            } else if (marks == 5) {
+                result = "Your score is 5";
+                result1 = "excellent";
+                document.getElementById("demo").innerHTML = result;
+                document.getElementById("dem").innerHTML = result1;
+                dup();
+            }
+
+            function dup() {
+                var g = document.querySelector("#btn2");
+                g.disabled = true;
+                var h = document.querySelector("#btn3");
+                h.disabled = false;
+
+            }
+
+
+
+
+        }
+    </script>
+
 </body>
 
 </html>
