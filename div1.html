@@ -2,40 +2,558 @@
 <html lang="en">
 
 <head>
-    <title>CSS Template</title>
+    <title>ROCKET HUB ONLINE QUIZ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <body>
-        <form action="div2.html">
-            <h3>neflfnesjlnesjllnfjlnsdjldsgnldgjsndsgjldsgnljdsgnljdsgnsgjlnsg</h3>
-            <input type="radio" value="3" id="a" name="3">
-            <label for="a">3</label><br>
-            <input type="radio" value="4" id="b" name="3">
-            <label for="b">4</label><br>
-            <input type="radio" value="5" id="c" name="3">
-            <label for="c">5</label><br>
-            <input type="radio" value="6" id="d" name="3">
-            <label for="d">6</label><br>
-            <button id="bt" onclick="btnclick()"> next</button>
+    <style>
+        .navbar-nav li a {
+            position: relative;
+            top: 50px !important;
+            right: 200px !important;
+            font-size: xx-large;
+            font-weight: bold !important;
+            color: black !important;
+        }
+        
+        .a form label {
+            font-size: large !important;
+            color: black !important;
+        }
+        
+        .container {
+            width: 100%;
+            background-color: #ddd;
+        }
+        
+        .skills {
+            text-align: right;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+        }
+    </style>
+</head>
 
-        </form>
-        <script>
-            var hy = 0;
-            localStorage.setItem("score", hy);
+<body onblur="timer111()" style="background-image: url(cybersecurity-background-3.jpg);">
+    <nav class="navbar navbar-default  " style="width: 100%;">
+        <div class="container-fluid" style="background-color:white;height: 150px;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mytarget">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                <a class="navbar-brand material-icons" href="#bus"><img src="Logo-1.png" alt="l" style="height: 150px;width: 250px;position: relative;bottom: 30px;left: 20px;"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="mytarget">
+                <ul class="nav navbar-nav" style="position: relative;left:710px;">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Contact us</a></li>
 
-            function btnclick() {
-                if (b.checked == true) {
-                    hy++
-                    localStorage.setItem("score", hy);
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <button onclick="timer1()" type="button" class="btn btn-primary btn-lg " style="position: relative;bottom:-18px;left: 622px;">start</button>
+
+    <div class="par" style="background: white;height: 560px;width: 920px;position: relative;display: inline-block;left: 200px;visibility: hidden;">
+        <div style="display: inline;position: relative;left:343px;">
+            <h1>Time Left :<span id="timer"></span></h1>
 
 
-                }
+        </div>
+
+
+
+        <div class="a" style="position: relative;left: 101px;top: 95px;visibility: hidden;display: inline-block;">
+            <form>
+                <h3 style="font-size: xx-large;color: black;">WHEN IS THE ROCKETHUB ORIGINAL <br> COMPANY CLOSE?</h3>
+
+                <div class="radio">
+                    <label><input type="radio" id="a0" name="optradio" >2015</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" id="b0" name="optradio">2019</label>
+                </div>
+                <div class="radio ">
+                    <label><input type="radio" id="c0" name="optradio">NOT YET CLOSED</label>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="qn2()">NEXT</button>
+            </form>
+        </div>
+
+
+
+    </div>
+    <div class="par1" style="background: white;height: 560px;width: 920px;position: relative;display: inline-block;left: 274px;visibility: hidden;top: -555px;">
+        <div style="display: inline;position: relative;left:343px;">
+            <h1>Time Left :<span id="timer1"></span></h1>
+
+
+        </div>
+        <div class="b" style="background: white;width: 840px;position: relative;display: inline-block;left: 64px;visibility: hidden;bottom: -144px;">
+            <form>
+                <h3 style="font-size: xx-large;color: black;">WHICH TYPES OF CHARACTER <br> DO THE ROCKETHUB NEED MOST?</h3>
+
+                <div class="radio">
+                    <label><input type="radio" id="b1" name="optradio" >YOKESH'S</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" id="a1" name="optradio">SHELMOITH'S</label>
+                </div>
+                <div class="radio ">
+                    <label><input type="radio" id="c1" name="optradio">BLESSINGS'S</label>
+                </div>
+                <button onclick="qn3()" type="button" class="btn btn-primary">NEXT</button>
+            </form>
+
+        </div>
+
+    </div>
+    <div class="par2" style="background: white;height: 560px;width: 920px;position: relative;display: inline-block;left: 274px;visibility: hidden;top: -1114px;">
+        <div style="display: inline;position: relative;left:343px;">
+            <h1>Time Left :<span id="timer2"></span></h1>
+
+
+        </div>
+        <div class="c" style="background: white;width: 840px;position: relative;display: inline-block;left: 64px;visibility: hidden;bottom: -144px;">
+            <form>
+                <h3 style="font-size: xx-large;color: black;">WHICH TYPES OF COMPANY <br> IS BRAINWASH THE PERSON WELL?</h3>
+
+                <div class="radio">
+                    <label><input type="radio" id="b2" name="optradio" >ROCKETHUB</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" id="a2" name="optradio">QNET</label>
+                </div>
+                <div class="radio ">
+                    <label><input type="radio" id="c2" name="optradio">MONEYCHAIN</label>
+                </div>
+                <button onclick="qn4()" type="button" class="btn btn-primary">NEXT</button>
+            </form>
+
+        </div>
+
+    </div>
+    <div class="par3" style="background: white;height: 560px;width: 920px;position: relative;display: inline-block;left: 274px;visibility: hidden;top: -1674px;">
+        <div style="display: inline;position: relative;left:343px;">
+            <h1>Time Left :<span id="timer3"></span></h1>
+
+
+        </div>
+        <div class="d" style="background: white;width: 840px;position: relative;display: inline-block;left: 64px;visibility: hidden;bottom: -144px;">
+            <form>
+                <h3 style="font-size: xx-large;color: black;">WHICH COMPANY HAS THE FANCY <br>NO OF 0-9 ?</h3>
+
+                <div class="radio">
+                    <label><input type="radio" id="b3" name="optradio" >ROCKETHUB</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" id="a3" name="optradio">QNET</label>
+                </div>
+                <div class="radio ">
+                    <label><input type="radio" id="c3" name="optradio">MONEYCHAIN</label>
+                </div>
+                <button onclick="qn5()" type="button" class="btn btn-primary">NEXT</button>
+            </form>
+
+        </div>
+
+    </div>
+    <div class="par4" style="background: white;height: 560px;width: 920px;position: relative;display: inline-block;left: 274px;visibility: hidden;top: -2236px;">
+        <div style="display: inline;position: relative;left:343px;">
+            <h1>Time Left :<span id="timer4"></span></h1>
+
+
+        </div>
+        <div class="e" style="background: white;width: 840px;position: relative;display: inline-block;left: 64px;visibility: hidden;bottom: -144px;">
+            <form>
+                <h3 style="font-size: xx-large;color: black;">WHICH COMPANY HAS THE ADDRESS <br>OF 9 COMPANIES?</h3>
+
+                <div class="radio">
+                    <label><input type="radio" id="b4" name="optradio" >ROCKETHUB</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" id="a4" name="optradio">QNET</label>
+                </div>
+                <div class="radio ">
+                    <label><input type="radio" id="c4" name="optradio">MONEYCHAIN</label>
+                </div>
+                <button onclick="finish()" type="button" class="btn btn-primary">FINISH</button>
+            </form>
+
+        </div>
+
+    </div>
+    <div class="par5" style="background: white;visibility: hidden;display: inline-block;position: relative;left: 266px;bottom: 2680px;width: 920px;height: 560px;">
+        <h1 style="font-size: 79px;">HERE IS YOUR RESULT</h1>
+        <div class="container">
+            <div style="position: relative;left: -13px;" class="skills "><span id="demo2"></span></div>
+        </div>
+        <p style="font-size: 50px;text-align: center;position: relative;top: 50px;text-shadow: 0 0 3px #FF0000;" id="demo"></p>
+        <p id="demo1" style="font-size:50px;text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;text-align: center;position: relative;top: 100px;"></p>
+
+
+
+
+    </div>
+
+    <div id="to" style="display: inline-block;background: white;height: 300px;position: relative;left: -598px;width: 590px;bottom: 2600px;visibility: hidden;">
+        <h1 style="text-align: center;">Time OUT</h1>
+    </div>
+    <div id="to1" style="display: inline-block;background: white;height: 300px;position: relative;left: 300px;width: 590px;bottom: 3212px;visibility: hidden;">
+        <h1 style="text-align: center;">YOU HAVE CHEATED</h1>
+    </div>
+
+
+
+
+    <script>
+        a = document.querySelector("#to");
+        b = document.querySelector(".par");
+        par1 = document.querySelector(".par1");
+        btn = document.querySelector(".btn");
+        par2 = document.querySelector(".par2");
+        par3 = document.querySelector(".par3");
+        par4 = document.querySelector(".par4");
+        par5 = document.querySelector(".par5");
+        skills = document.querySelector(".skills");
+
+
+        c = document.querySelector(".a");
+        d = document.querySelector(".b");
+        e = document.querySelector(".c");
+        f = document.querySelector(".d");
+        g = document.querySelector(".e");
+        to1 = document.querySelector("#to1");
+        var hy = 0;
+        localStorage.setItem("score", hy);
+
+
+
+
+        var t = 60;
+
+
+
+        function timer1() {
+
+            b.style.visibility = "visible";
+            btn.style.visibility = "hidden";
+            c.style.visibility = "visible";
+            var i = setInterval(timer11, 1000);
+            localStorage.setItem("time", i);
+        }
+
+
+        function timer11() {
+            var ti = localStorage.getItem("time");
+
+            document.getElementById("timer").innerHTML = t;
+            t--;
+            if (t == -1) {
+
+                a.style.visibility = "visible";
+                c.style.visibility = "hidden";
+                clearInterval(ti);
+
+
 
             }
-        </script>
+
+        }
+
+        function timer111() {
+            var ti = localStorage.getItem("time");
+            clearInterval(ti);
+            a.style.visibility = "hidden";
+            c.style.visibility = "hidden";
+            to1.style.visibility = "visible";
 
 
-    </body>
+
+        }
+
+        function qn2() {
+            var hy = localStorage.getItem("score");
+            console.log(hy);
+            if (b0.checked == true) {
+                hy++;
+                console.log(hy);
+                localStorage.setItem("score", hy);
+            }
+            var ti = localStorage.getItem("time");
+            clearInterval(ti);
+
+
+
+            a.style.visibility = "hidden";
+            c.style.visibility = "hidden";
+            b.style.visibility = "hidden";
+            par1.style.visibility = "visible";
+
+            d.style.visibility = "visible";
+            var t1 = 60;
+
+            var j = setInterval(function() {
+
+
+
+
+
+                document.getElementById("timer1").innerHTML = t1;
+                t1--;
+
+                if (t1 == -1) {
+                    a.style.visibility = "visible";
+                    d.style.visibility = "hidden";
+                    clearInterval(j);
+                }
+            }, 1000);
+            localStorage.setItem("time", j)
+
+        }
+
+        function qn3() {
+            var hy = localStorage.getItem("score");
+            console.log(hy);
+            if (b1.checked == true) {
+                hy++;
+                console.log(hy);
+
+                localStorage.setItem("score", hy);
+
+
+
+            }
+
+            var ti = localStorage.getItem("time");
+            clearInterval(ti);
+
+
+
+            a.style.visibility = "hidden";
+            par1.style.visibility = "hidden";
+            d.style.visibility = "hidden";
+            par2.style.visibility = "visible";
+
+
+            e.style.visibility = "visible";
+            var t1 = 60;
+
+            var j = setInterval(function() {
+
+
+
+
+
+                document.getElementById("timer2").innerHTML = t1;
+                t1--;
+
+                if (t1 == -1) {
+                    a.style.visibility = "visible";
+                    par2.style.visibility = "hidden";
+
+                    clearInterval(j);
+                }
+            }, 1000);
+            localStorage.setItem("time", j)
+
+        }
+
+        function qn4() {
+            var hy = localStorage.getItem("score");
+            console.log(hy);
+            if (b2.checked == true) {
+                hy++
+                console.log(hy);
+                localStorage.setItem("score", hy);
+
+
+
+            }
+
+            var ti = localStorage.getItem("time");
+            clearInterval(ti);
+
+
+
+            a.style.visibility = "hidden";
+            par2.style.visibility = "hidden";
+            f.style.visibility = "visible";
+
+            par3.style.visibility = "visible";
+
+
+            var t1 = 60;
+
+            var j = setInterval(function() {
+
+
+
+
+
+                document.getElementById("timer3").innerHTML = t1;
+                t1--;
+
+                if (t1 == -1) {
+                    a.style.visibility = "visible";
+
+                    f.style.visibility = "hidden";
+                    clearInterval(j);
+                }
+            }, 1000);
+            localStorage.setItem("time", j)
+
+        }
+
+        function qn5() {
+            var hy = localStorage.getItem("score");
+            console.log(hy);
+            if (b3.checked == true) {
+                hy++;
+                console.log(hy);
+                localStorage.setItem("score", hy);
+
+
+
+            }
+
+            var ti = localStorage.getItem("time");
+            clearInterval(ti);
+
+
+
+
+            a.style.visibility = "hidden";
+            par3.style.visibility = "hidden";
+            f.style.visibility = "hidden";
+            g.style.visibility = "visible";
+
+            par4.style.visibility = "visible";
+
+
+            var t1 = 60;
+
+            var j = setInterval(function() {
+
+
+
+
+
+                document.getElementById("timer4").innerHTML = t1;
+                t1--;
+
+                if (t1 == -1) {
+                    a.style.visibility = "visible";
+
+                    g.style.visibility = "hidden";
+                    clearInterval(j);
+                }
+            }, 1000);
+            localStorage.setItem("time", j)
+
+        }
+
+        function finish() {
+            var ti = localStorage.getItem("time");
+
+            clearInterval(ti);
+
+            var hy = localStorage.getItem("score");
+            if (b4.checked == true) {
+                hy++;
+                console.log(hy);
+                localStorage.setItem("score", hy);
+
+
+
+            }
+            console.log(hy);
+            a.style.visibility = "hidden";
+            par4.style.visibility = "hidden";
+            g.style.visibility = "hidden";
+            par5.style.visibility = "visible";
+            if (hy == 0) {
+                var ra = "YOUR SCORE IS 0";
+                var re = "REVIEW:VERY VERY POOR";
+                var ree = "0%";
+                skills.style.width = "0px";
+                skills.style.background = "red";
+                document.getElementById("demo").innerHTML = ra;
+                document.getElementById("demo1").innerHTML = re;
+                document.getElementById("demo2").innerHTML = ree;
+            } else if (hy == 1) {
+                var ra = "YOUR SCORE IS 1";
+                var re = "REVIEW:VERY POOR";
+                var ree = "20%"
+                skills.style.width = "20%";
+                skills.style.background = "blue";
+                document.getElementById("demo").innerHTML = ra;
+                document.getElementById("demo1").innerHTML = re;
+                document.getElementById("demo2").innerHTML = ree;
+
+            } else if (hy == 2) {
+                var ra = "YOUR SCORE IS 2";
+                var re = " REVIEW:POOR";
+                var ree = "40%";
+                skills.style.width = "40%";
+                skills.style.background = "yellow";
+                document.getElementById("demo").innerHTML = ra;
+                document.getElementById("demo1").innerHTML = re;
+                document.getElementById("demo2").innerHTML = ree;
+
+            } else if (hy == 3) {
+                var ra = "YOUR SCORE IS 3";
+                var re = " REVIEW:AVERAGE";
+                var ree = "60%";
+                skills.style.width = "60%";
+                skills.style.background = "pink";
+                document.getElementById("demo").innerHTML = ra;
+                document.getElementById("demo1").innerHTML = re;
+                document.getElementById("demo2").innerHTML = ree;
+
+            } else if (hy == 4) {
+                var ra = "YOUR SCORE IS 4";
+                var re = " REVIEW:GOOD";
+                var ree = "80%";
+                skills.style.width = "80%";
+                skills.style.background = "violet";
+                document.getElementById("demo").innerHTML = ra;
+                document.getElementById("demo1").innerHTML = re;
+                document.getElementById("demo2").innerHTML = ree;
+
+            } else if (hy == 5) {
+                var ra = "YOUR SCORE IS 5";
+                var re = " REVIEW:EXCELLENT";
+                var ree = "100%"
+                skills.style.width = "103%";
+                skills.style.background = "green";
+                document.getElementById("demo").innerHTML = ra;
+                document.getElementById("demo1").innerHTML = re;
+                document.getElementById("demo2").innerHTML = ree;
+
+            }
+
+
+
+
+
+        }
+    </script>
+
+
+
+
+</body>
 
 </html>
