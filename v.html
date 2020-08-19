@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="timer1()">
+
+    <h1>Time Left :<span id="timer"></span></h1>
+    <script>
+        function timer1() {
+            var t = 5;
+            var a = setInterval(timer11, 1000);
+
+            function timer11() {
+                document.getElementById("timer").innerHTML = t;
+                t--;
+            }
+        }
+    </script>
+    <div class="b" style="background: white;height: 560px;width: 920px;position: relative;display: inline-block;left: 200px;visibility: hidden;">
+        <form style="position: relative;left: 188px;top: 200px;">
+            <h3 style="font-size: xx-large;color: black;">WHICH TYPES OF CHARACTER <br> DO THE ROCKETHUB NEED MOST?</h3>
+            <div style="display: inline;position: relative;bottom: 265px;left:343px;">
+                <h1>Time Left :<span id="timer"></span></h1>
+
+
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio" >YOKESH'S</label>
+            </div>
+            <div class="radio">
+                <label><input type="radio" name="optradio">SHELMOITH'S</label>
+            </div>
+            <div class="radio ">
+                <label><input type="radio" name="optradio">BLESSINGS'S</label>
+            </div>
+            <button type="button" class="btn btn-primary">NEXT</button>
+        </form>
+        <div id="to2" style="display: inline-block;background: white;height: 300px;position: absolute;left: 180px;width: 590px;visibility: hidden;bottom: 70px;">
+            <h1>Time OUT</h1>
+
+        </div>
+        function qn2() { clearInterval(i); a.style.visibility = "hidden"; b.style.visibility = "hidden"; d.style.visibility = "visible"; var t = 3; var i = setInterval(timer12, 1000); function timer12() { document.getElementById("timer").innerHTML = t; t--; if
+        (t == 0) { a.style.visibility = "visible"; d.style.visibility = "hidden"; clearInterval(i); } } }
+
+</body>
+
+</html>

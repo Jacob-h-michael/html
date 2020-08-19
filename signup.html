@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .a {
+            background-image: url(flat-design-bus-travel-background_23-2147639854.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+        
+        .navbar li a {
+            color: #fff !important;
+        }
+        
+        ul.dropdown-menu {
+            background-color: yellowgreen;
+        }
+        
+        ul.dropdown-menu li a {
+            color: black !important;
+        }
+        
+        .navbar a:visited {
+            background-color: blue !important;
+        }
+        
+        .dropdown-menu li a:hover {
+            background-color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid" style="background-color:black;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mytarget">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand material-icons" href="onliine bus.html"><i  style="font-size:36px ;color:red;">airport_shuttle</i></a>
+            </div>
+            <ul id="mytarget" class="nav navbar-nav navbar-right">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">login
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">sign in</a></li>
+                        <li><a href="#">sign up</a></li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="a" style="height: 100%;">
+        <h2>Sign up</h2>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="remember"> Remember me</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
